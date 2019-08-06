@@ -1,6 +1,11 @@
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class Main {
   public static void main(String[] args) {
-    System.out.println("Calling Pluralize");
+//    System.out.println("Calling Pluralize");
 
 //    String word1 = "dog";
 //    int word1Count = 1;
@@ -13,9 +18,12 @@ public class Main {
 //    String word3 = "turtle";
 //    int word3Count = 0;
 //    System.out.println("I own " + word3Count + " " + pluralize(word3, word3Count) + ".");
-
+//
     System.out.println("Calling Flip N Heads");
-    flipNHeads(2);
+    flipNHeads(1);
+//
+//    System.out.println("Calling Clock");
+//    clock();
   }
 
   public static String pluralize(String word, int num){
@@ -24,6 +32,7 @@ public class Main {
 
   public static void flipNHeads(int n){
     int numberOfHeads = 1;
+    if(n == 1) numberOfHeads = 0;
     int numberOfFlips = 0;
     boolean prevFlipWasHeads = false;
 
@@ -36,6 +45,7 @@ public class Main {
         prevFlipWasHeads = false;
       } else {
         System.out.println("heads");
+        if(n == 1) numberOfHeads++;
         if(prevFlipWasHeads == true) numberOfHeads++;
         prevFlipWasHeads = true;
       }
@@ -49,4 +59,13 @@ public class Main {
   public static double random(int min, int max){
     return (double)(Math.random() * (max - min));
   }
+
+//  public static void clock(){
+//    Timer myTimer = new Timer();
+//    TimerTask task = new TimerTask(){
+//      LocalDateTime now = LocalDateTime.now();
+//      String time = now.format(DateTimeFormatter.ofPattern("HH:mm:ss"));
+//      System.out.println(time);
+//    }
+//  }
 }
