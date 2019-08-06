@@ -1,5 +1,5 @@
 # Java Fundamentals
 
-# Inside are 10 Java labs
+# Table of Contents
 
 1.[basics](/basics)
