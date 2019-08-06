@@ -11,3 +11,7 @@ flipNHeads is a method that takes in an integer ```n``` and flips coins until ``
 
 ### Command Line Clock
 clock is a method that uses Java's built-in ```LocalDateTime``` object to constantly print out the current time to the console, second by second.  The program can be stopped with ```CTRL-C```.  The program detects when the second increases and only prints something out when the time stamp changes.
+
+
+## Acknowledgements
+The clock code came from this [tutorial](https://www.youtube.com/watch?v=36jbBSQd3eU).
