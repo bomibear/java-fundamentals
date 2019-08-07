@@ -15,4 +15,4 @@ calcAvg is a method, within the Averages class, that determines what is the aver
 
 
 ### Array of Arrays
-
+Given an array of arrays calculate the average value for each array and return the array with the lowest average.
