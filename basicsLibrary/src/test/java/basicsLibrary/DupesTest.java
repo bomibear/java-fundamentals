@@ -11,17 +11,17 @@ public class DupesTest {
         Dupes dupes = new Dupes();
 
         Boolean result = dupes.containsDuplicates(arr);
-
-        assertFalse("There should be no dupes", result);
+        System.out.println(result);
+        assertTrue("There should be no dupes", result);
     }
 
     @Test
     public void ContainsDupes(){
-        int[] arr = {1,2,3,4,6,6};
+        int[] arr = {1,1,3,6,6,6};
         Dupes dupes = new Dupes();
 
         Boolean result = dupes.containsDuplicates(arr);
-
+        System.out.println("result " + result);
         assertFalse("There should be dupes", result);
     }
 
