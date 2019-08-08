@@ -10,17 +10,21 @@ public class Linter {
 
     public static String LinterCheck(){
         String filePath = "./src/main/resources/gates.js";
+        int lineNumber = 1;
         try {
-//            Scanner s = new Scanner(new File(filePath));
             BufferedReader reader = new BufferedReader(new FileReader(filePath));
             String line = reader.readLine();
             while (line != null) {
-//                System.out.println(line);
-                
+                if(!line.equals("")
+                        && !line.endsWith("{")
+                        && !line.endsWith("}")
+                        && !line.contains("if")
+                        && !line.contains("else")){
+                    System.out.println("Line " + lineNumber + ": Missing semicolon.");
+                }
                 line = reader.readLine();
-
+                lineNumber++;
             }
-            System.out.println("end of file");
         } catch (IOException e) {
             System.out.println("the file was not found");
         }
