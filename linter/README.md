@@ -19,3 +19,5 @@ The code to iterate through the HashMap and determine the winner was taken from 
 Linter was able to read in files with this [code](https://www.journaldev.com/709/java-read-file-line-by-line).
 
 Properties of Java strings were taken from [here](https://beginnersbook.com/2013/12/java-strings/).
+
+Testing an empty file was taken from [here](https://stackoverflow.com/questions/7190618/most-efficient-way-to-check-if-a-file-is-empty-in-java-on-windows);
