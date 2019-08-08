@@ -17,7 +17,6 @@ public class WeatherTest {
         Weather newAnalysis = new Weather();
 
         String actual = newAnalysis.analyzeWeather(weeklyMonthTemperatures);
-        System.out.println(actual);
         StringBuilder sb = new StringBuilder();
         sb.append("High: 72\n");
         sb.append("Low: 51\n");
@@ -28,7 +27,6 @@ public class WeatherTest {
 
         String expected = sb.toString();
 
-        System.out.println(expected);
         assertTrue(actual.equals(expected));
     }
 }
