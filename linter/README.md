@@ -3,7 +3,9 @@
 ## Contents
 
 ### Linter
-This application reads in a file and checks for linter errors.  A linter error consists of a missiing semicolon as long as the line is not empty, doesn't end with an opening curly brace, end with a closing curly brace, and doesn't contain an ```if``` or an ```else```. 
+This application reads in a file and checks for linter errors.  A linter error consists of a missing semicolon as long as the line is not empty, doesn't end with an opening curly brace, doesn't end with a closing curly brace, and doesn't contain an ```if```, and doesn't contain an ```else```. 
+
+The files used consists of JavaScript code.  The console output consists of all the lines where the semicolon is missing.
 
 ### Weather
 This class determines the highest and lowest temperature given a month's worth of temperatures.  It then finds out which temperatures, between the highest and the lowest, were never seen that month.
