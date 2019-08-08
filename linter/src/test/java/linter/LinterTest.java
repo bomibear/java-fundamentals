@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 public class LinterTest {
     @Test
     public void canCheckAnEmptyFile(){
-        String filePath = "./src/main/resources/gates.js";
+        String filePath = "./src/main/resources/empty.js";
 
         Linter newLinter = new Linter();
         String actual = newLinter.LinterCheck(filePath);
@@ -18,32 +18,40 @@ public class LinterTest {
         assertTrue(actual.equals(expected));
 
     }
+
+    @Test
+    public void canCheckForNoErrors(){
+        String filePath = "./src/main/resources/noError.js";
+
+        Linter newLinter = new Linter();
+        String actual = newLinter.LinterCheck(filePath);
+        assertTrue(actual.length() == 0);
+    }
+
 //    @Test
-//    public void canCheckIfEmpty(){
-//        String filePath = "./src/main/resources/empty.js";
-//        try {
-//            BufferedReader reader = new BufferedReader(new FileReader(filePath));
-//            String line = reader.readLine();
-//            if (reader.readLine() == null) {
-//                System.out.println("No errors, and file empty");
-//            }
-//        } catch (IOException e) {
-//            System.out.println("the file was not found");
-//        }
+//    public void canCheckForFewErrors(){
+//        String filePath = "./src/main/resources/fewError.js";
 //
 //        Linter newLinter = new Linter();
-//        newLinter.LinterCheck();
-//        String expected = "Hello";
-//        String actual = "Hello";
-//        assertEquals(expected, actual);
-//    }
-//    @Test
-//    public void canCheckIfEmpty(){
-//        Linter newLinter = new Linter();
-//        newLinter.LinterCheck();
-//        String expected = "Hello";
-//        String actual = "Hello";
-//        assertEquals(expected, actual);
+//        String actual = newLinter.LinterCheck(filePath);
+//        assertTrue(actual.length() == 0);
 //    }
 
+//    @Test
+//    public void canCheckForOneError(){
+//        String filePath = "./src/main/resources/oneError.js";
+//
+//        Linter newLinter = new Linter();
+//        String actual = newLinter.LinterCheck(filePath);
+//        assertTrue(actual.length() == 1);
+//    }
+
+//    @Test
+//    public void canCheckForManyErrors(){
+//        String filePath = "./src/main/resources/oneError.js";
+//
+//        Linter newLinter = new Linter();
+//        String actual = newLinter.LinterCheck(filePath);
+//        assertTrue(actual.length() == 1);
+//    }
 }
