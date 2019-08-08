@@ -9,14 +9,12 @@ public class Linter {
 
     public static String LinterCheck(String filePath){
         int lineNumber = 1;
-        boolean mistakeFound = false;
         StringBuilder sb = new StringBuilder();
         try {
             BufferedReader reader = new BufferedReader(new FileReader(filePath));
             String line = reader.readLine();
             if(line == null){
                 sb.append("Empty file");
-                System.out.println("Empty file");
                 return sb.toString();
             }
             while (line != null) {
@@ -24,12 +22,12 @@ public class Linter {
                         && !line.endsWith("{")
                         && !line.endsWith("}")
                         && !line.contains("if")
-                        && !line.contains("else")){
+                        && !line.contains("else")
+                        && !line.endsWith(";")){
                     sb.append("Line " + lineNumber + ": Missing semicolon.\n");
                 }
-                line = reader.readLine();
                 lineNumber++;
-                mistakeFound = true;
+                line = reader.readLine();
             }
         } catch (IOException e) {
             System.out.println("the file was not found");
