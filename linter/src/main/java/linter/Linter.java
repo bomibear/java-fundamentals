@@ -14,8 +14,9 @@ public class Linter {
         try {
             BufferedReader reader = new BufferedReader(new FileReader(filePath));
             String line = reader.readLine();
-            if(line != null){
+            if(line == null){
                 sb.append("Empty file");
+                System.out.println("Empty file");
                 return sb.toString();
             }
             while (line != null) {
@@ -34,11 +35,8 @@ public class Linter {
             System.out.println("the file was not found");
         }
         System.out.println(sb.toString());
-        int numberOfErrors = howManyErrors(lineNumber);
+        System.out.println(sb.toString().length());
         return sb.toString();
     }
 
-    public static int howManyErrors(int num){
-        return num;
-    }
 }
