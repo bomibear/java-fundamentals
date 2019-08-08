@@ -28,23 +28,27 @@ public class LinterTest {
         assertTrue(actual.length() == 0);
     }
 
-//    @Test
-//    public void canCheckForFewErrors(){
-//        String filePath = "./src/main/resources/fewError.js";
-//
-//        Linter newLinter = new Linter();
-//        String actual = newLinter.LinterCheck(filePath);
-//        assertTrue(actual.length() == 0);
-//    }
-
     @Test
     public void canCheckForOneError(){
         String filePath = "./src/main/resources/oneError.js";
 
         Linter newLinter = new Linter();
         String actual = newLinter.LinterCheck(filePath);
-        assertTrue(actual.length() == 26);
+        //each message line is 27 characters long, and 1 error message is 27 characters long
+        assertTrue(actual.length() == 27);
     }
+
+//    @Test
+//    public void canCheckForFewErrors(){
+//        String filePath = "./src/main/resources/fewError.js";
+//
+//        Linter newLinter = new Linter();
+//        String actual = newLinter.LinterCheck(filePath);
+//        //each message line is 27 characters long, and 1 error message is 27 characters long
+//        //3 error messages in this ex, so 27 * 3
+//        assertTrue(actual.length() == 81);
+//    }
+
 
 //    @Test
 //    public void canCheckForManyErrors(){
