@@ -1,4 +1,4 @@
-# Linter
+# Maps, File I/O, and Testing
 
 ## Contents
 
