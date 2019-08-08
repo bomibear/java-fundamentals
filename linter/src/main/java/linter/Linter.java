@@ -3,11 +3,13 @@ package linter;
 import java.io.*;
 
 public class Linter {
-//    public static void main(String[] args) {
-//        LinterCheck("./src/main/resources/gates.js");
-//    }
+    public static void main(String[] args) {
+        LinterCheck("./src/main/resources/gates.js");
+    }
+
     public static String LinterCheck(String filePath){
         int lineNumber = 1;
+        boolean mistakeFound = false;
         StringBuilder sb = new StringBuilder();
         try {
             BufferedReader reader = new BufferedReader(new FileReader(filePath));
@@ -26,11 +28,17 @@ public class Linter {
                 }
                 line = reader.readLine();
                 lineNumber++;
+                mistakeFound = true;
             }
         } catch (IOException e) {
             System.out.println("the file was not found");
         }
         System.out.println(sb.toString());
+        int numberOfErrors = howManyErrors(lineNumber);
         return sb.toString();
+    }
+
+    public static int howManyErrors(int num){
+        return num;
     }
 }
