@@ -33,7 +33,6 @@ public class Linter {
             System.out.println("the file was not found");
         }
         System.out.println(sb.toString());
-        System.out.println(sb.toString().length());
         return sb.toString();
     }
 
