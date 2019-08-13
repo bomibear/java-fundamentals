@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 
 public class RestaurantTest {
 
-    Restaurant testRestaurant;
+    private Restaurant testRestaurant;
     @Before
     public void setUp() throws Exception{
         testRestaurant = new Restaurant("World Class Cafe", 4, "$");

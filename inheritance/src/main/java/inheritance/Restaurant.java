@@ -1,41 +1,40 @@
 package inheritance;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Restaurant {
-    public String name;
+    private String name;
     public double numberOfStars;
-    public String priceCategory;
-    public ArrayList<Review> review;
+    private String priceCategory;
+    private LinkedList<Review> reviews = new LinkedList<>();
 
     public Restaurant(String name, double numberOfStars, String priceCategory){
         this.name = name;
         this.numberOfStars = numberOfStars;
         this.priceCategory = priceCategory;
-        this.review = new ArrayList<>();
     }
 
     public String toString(){
-        return "Name: " + this.name + ", Number of Stars: " + String.format("%.2f", this.numberOfStars) + ", Price Category: " + this.priceCategory + ", " + this.review;
+        return "Name: " + this.name + ", Number of Stars: " + String.format("%.2f", this.numberOfStars) + ", Price Category: " + this.priceCategory + ", " + this.reviews;
     }
 
     //adds reviews to the list of reviews associated with this restaurant
-    public ArrayList<Review> addReview(Review review){
-        if(!this.review.contains(review)){
-            this.review.add(review);
+    public void addReview(Review review){
+        if(!this.reviews.contains(review)){
+            this.reviews.add(review);
         }
         changeStarsBasedOnReview();
-        return this.review;
     }
 
     //determines avg number of stars based on stars from all the reviews
-    public double changeStarsBasedOnReview(){
+    private void changeStarsBasedOnReview(){
         double total = 0;
-        for(int i = 0; i < this.review.size(); i++ ){
-            total += this.review.get(i).numberOfStars;
+        for(int i = 0; i < this.reviews.size(); i++ ){
+            total += this.reviews.get(i).getNumberOfStars();
         }
+//        this.reviews.forEach();
 
-        this.numberOfStars = total/this.review.size();
+        this.numberOfStars = total/this.reviews.size();
 
         //ratings cannot exceed 5 nor go below 0
         if(this.numberOfStars > 5){
@@ -43,6 +42,5 @@ public class Restaurant {
         } else if(this.numberOfStars < 0){
             this.numberOfStars = 0;
         }
-        return this.numberOfStars;
     }
 }
