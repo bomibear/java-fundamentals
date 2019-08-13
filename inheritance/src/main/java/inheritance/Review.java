@@ -3,16 +3,16 @@ package inheritance;
 public class Review {
     public String body;
     public String author;
-    public int numberOfStars;
+    public double numberOfStars;
 
-    public Review(String body, String author, int numberOfStars){
+    public Review(String body, String author, double numberOfStars){
         this.body = body;
         this.author = author;
         this.numberOfStars = numberOfStars;
     }
 
     public String toString(){
-        return "Review: " + this.body + ", Author: " + this.author + ", Number Of Stars: " + this.numberOfStars;
+        return "Review: " + this.body + ", Author: " + this.author + ", Number Of Stars: " + String.format("%.2f", this.numberOfStars);
     }
 
 }
