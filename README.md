@@ -7,3 +7,5 @@
 2. [basics library](/basicsLibrary)
 
 3. [linter](/linter)
+
+4. [inheritance](/inheritance)
