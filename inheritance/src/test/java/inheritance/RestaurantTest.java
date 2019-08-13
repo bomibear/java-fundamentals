@@ -14,7 +14,7 @@ public class RestaurantTest {
     }
 
     @Test
-    public void testToString(){
+    public void canPrintToString(){
         assertEquals("Name: World Class Cafe, Number of Stars: 4, Price Category $", testRestaurant.toString());
     }
 
