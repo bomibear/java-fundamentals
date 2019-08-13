@@ -14,3 +14,6 @@ Testing can be done via an editor of your choice after having cloned this repo. 
 
 Another way to test this is via a terminal of your choice.  ```cd``` into this repo after cloning it, and type in ```./gradlew test```.
 
+## Resources
+How to print two decimal points was suggested [here](https://stackoverflow.com/questions/8819842/best-way-to-format-a-double-value-to-2-decimal-places).
+
