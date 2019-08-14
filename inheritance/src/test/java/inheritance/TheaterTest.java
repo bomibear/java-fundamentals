@@ -27,10 +27,17 @@ public class TheaterTest {
 
     @Test
     public void canAddTheaterReviewWithMovieName(){
-        TheaterReview review = new TheaterReview("","",3, "The Lion King");
+        TheaterReview review = new TheaterReview("Tear jerker!","Joe Schmoe",5, "The Lion King");
+        testTheater.addReview(review);
+        assertEquals("Theater Name: AMC, Currently Showing: [Spider Man, Toy Story, The Lion King], [Movie Name: The Lion King, Review: Tear jerker!, Author: Joe Schmoe, Number Of Stars: 5.00]", testTheater.toString());
+    }
+
+    @Test
+    public void canAddTheaterReviewWithNoMovieName(){
+        TheaterReview review = new TheaterReview("Pretty clean spot","Joe Schmoe",4);
         testTheater.addReview(review);
 
-        assertEquals("", testTheater.toString());
+        assertEquals("Theater Name: AMC, Currently Showing: [Spider Man, Toy Story, The Lion King], [Review: Pretty clean spot, Author: Joe Schmoe, Number Of Stars: 4.00]", testTheater.toString());
     }
 
 }

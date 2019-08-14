@@ -10,6 +10,7 @@ public class Theater {
     public Theater(String name, LinkedList<String> currentMovies){
         this.name = name;
         this.currentMovies = currentMovies;
+        this.reviews = new LinkedList<>();
     }
 
     public String toString(){
@@ -25,3 +26,5 @@ public class Theater {
         }
     }
 }
+
+

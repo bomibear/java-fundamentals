@@ -16,7 +16,7 @@ public class TheaterReview extends Review {
 
     public String toString(){
         if(this.movieName != null){
-            return "Movie Name: " + this.movieName + "Review: " + this.getBody() + ", Author: " + this.getAuthor() + ", Number Of Stars: " + String.format("%.2f", this.getNumberOfStars());
+            return "Movie Name: " + this.movieName + ", Review: " + this.getBody() + ", Author: " + this.getAuthor() + ", Number Of Stars: " + String.format("%.2f", this.getNumberOfStars());
         }
         return "Review: " + this.getBody() + ", Author: " + this.getAuthor() + ", Number Of Stars: " + String.format("%.2f", this.getNumberOfStars());
     }
