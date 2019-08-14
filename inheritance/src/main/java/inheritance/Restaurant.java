@@ -23,6 +23,7 @@ public class Restaurant {
         if(!this.reviews.contains(review)){
             this.reviews.add(review);
         }
+        review.setRestaurant(this);
         changeStarsBasedOnReview();
     }
 
@@ -32,7 +33,6 @@ public class Restaurant {
         for(int i = 0; i < this.reviews.size(); i++ ){
             total += this.reviews.get(i).getNumberOfStars();
         }
-//        this.reviews.forEach();
 
         this.numberOfStars = total/this.reviews.size();
 
