@@ -23,7 +23,6 @@ public class Restaurant {
         if(!this.reviews.contains(review)){
             this.reviews.add(review);
         }
-        review.setRestaurant(this);
         changeStarsBasedOnReview();
     }
 

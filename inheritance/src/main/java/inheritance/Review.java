@@ -30,19 +30,10 @@ public class Review {
         this.numberOfStars = numberOfStars;
     }
 
-    public Restaurant getRestaurant() {
-        return restaurant;
-    }
-
-    public void setRestaurant(Restaurant restaurant) {
-        this.restaurant = restaurant;
-    }
-
     public Review(String body, String author, double numberOfStars){
         this.body = body;
         this.author = author;
         this.numberOfStars = numberOfStars;
-        this.restaurant = restaurant;
     }
 
     public String toString(){
