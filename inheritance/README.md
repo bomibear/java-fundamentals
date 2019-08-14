@@ -1,13 +1,16 @@
 # Inheritance
 
 ## Overview of the Architecture
-This is a library of Restaurant and Reviews.
+This is a library of Restaurant, Shops, Theaters and Reviews.
 
-The restaurant class allows restaurants to be instantiated.  
+The restaurant, shop, and theater class allows restaurants, shops, and theaters to be instantiated.  
 
-Reviews can be added for that restaurant, and that restaurant will have a list of reviews.  
+Reviews can be added for that restaurant, shop, and theater.  
 
-Additionally, the number of stars ratings for that restaurant will change based on the number of stars for each review.
+Specifically, the review system for the theater is slightly different in that it allows a user to add a review with or without a movie name.
+
+Additionally, the number of stars ratings for a restaurant will change based on the number of stars for each review.
+
 
 ## Testing Directions
 Testing can be done via an editor of your choice after having cloned this repo.  There are tests written in the test folder of ```src```.  Your editor should provide a play button to run the tests.
