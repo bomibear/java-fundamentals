@@ -25,4 +25,12 @@ public class TheaterTest {
         assertEquals("Theater Name: AMC, Currently Showing: [Spider Man, Toy Story, The Lion King]", testTheater.toString());
     }
 
+    @Test
+    public void canAddTheaterReviewWithMovieName(){
+        TheaterReview review = new TheaterReview("","",3, "The Lion King");
+        testTheater.addReview(review);
+
+        assertEquals("", testTheater.toString());
+    }
+
 }

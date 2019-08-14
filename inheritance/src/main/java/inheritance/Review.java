@@ -4,7 +4,6 @@ public class Review {
     private String body;
     private String author;
     private double numberOfStars;
-    private Restaurant restaurant;
 
     public String getBody() {
         return body;

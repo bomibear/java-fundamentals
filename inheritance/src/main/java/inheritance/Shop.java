@@ -22,7 +22,6 @@ public class Shop {
         if(!this.reviews.contains(review)){
             this.reviews.add(review);
         }
-
     }
 
 }
