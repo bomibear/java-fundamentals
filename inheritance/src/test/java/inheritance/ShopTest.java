@@ -15,7 +15,7 @@ public class ShopTest {
 
     @Test
     public void canPrintToString(){
-        assertEquals("Store Name: The Sock Store, Description: Offers all the socks, Price Category: $", testShop.toString());
+        assertEquals("Store Name: The Sock Store, Description: Offers all the socks, Price Category: $, []", testShop.toString());
     }
 
     @Test
