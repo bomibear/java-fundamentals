@@ -22,7 +22,7 @@ public class TheaterTest {
 
     @Test
     public void canPrintToString(){
-        assertEquals("Theater Name: AMC, Currently Showing: [Spider Man, Toy Story, The Lion King]", testTheater.toString());
+        assertEquals("Theater Name: AMC, Currently Showing: [Spider Man, Toy Story, The Lion King], []", testTheater.toString());
     }
 
     @Test
@@ -38,6 +38,22 @@ public class TheaterTest {
         testTheater.addReview(review);
 
         assertEquals("Theater Name: AMC, Currently Showing: [Spider Man, Toy Story, The Lion King], [Review: Pretty clean spot, Author: Joe Schmoe, Number Of Stars: 4.00]", testTheater.toString());
+    }
+
+    @Test
+    public void canAddAMovie(){
+        int lengthBeforeAddingAMovie = testTheater.currentMovies.size();
+        testTheater.addMovie("Zootopia");
+        int lengthAfterAddingAMovie = testTheater.currentMovies.size();
+        assertTrue(lengthAfterAddingAMovie == lengthBeforeAddingAMovie + 1);
+    }
+
+    @Test
+    public void canRemoveAMovie(){
+        int lengthBeforeRemovingAMovie = testTheater.currentMovies.size();
+        testTheater.removeMovie("Spider Man");
+        int lengthAfterRemovingAMovie = testTheater.currentMovies.size();
+        assertTrue(lengthAfterRemovingAMovie == lengthBeforeRemovingAMovie - 1);
     }
 
 }

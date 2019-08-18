@@ -5,6 +5,8 @@ This is a library of Restaurant, Shops, Theaters and Reviews.
 
 The restaurant, shop, and theater class allows restaurants, shops, and theaters to be instantiated.  
 
+Within the Theater class, movies being shown can be added and removed.
+
 Reviews can be added for that restaurant, shop, and theater.  
 
 Specifically, the review system for the theater is slightly different in that it allows a user to add a review with or without a movie name.
